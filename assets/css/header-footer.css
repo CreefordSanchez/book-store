@@ -2,14 +2,25 @@
 
 @import url(./color.css);
 
+/**/
+body {
+  background-color: var(--app-gray);
+}
+/**/
 .container {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
 }
 
+header {
+  padding-top: 65px;
+}
+
 .sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: var(--app-blue);
-  background-color: #334750;
   padding: 10px 0;
 }
 
@@ -42,4 +53,21 @@
 .hide-panel-btn {
   font-size: 20px;
   color: var(--app-gray);
+}
+
+.header-content {
+  background-color: #fff;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header-grid nav {
+  justify-self: center;
+}
+
+.header-grid .wallet {
+  justify-self: end;
 }
