@@ -14,16 +14,29 @@
 
 .sticky-header-content {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   justify-content: end;
 }
 
 .add-cart-btn {
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 130px;
   background-color: var(--app-green);
   border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.download-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px 25px;
+}
+
+.hide-panel-btn {
+  font-size: 20px;
 }
