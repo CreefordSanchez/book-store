@@ -7,6 +7,7 @@ body {
   background-color: var(--app-gray);
 }
 /**/
+
 .container {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
@@ -14,6 +15,14 @@ body {
 
 header {
   padding-top: 65px;
+
+  ul {
+    list-style: none;
+  }
+
+  li, a {
+    text-decoration: none;
+  }
 }
 
 .sticky-header {
@@ -57,17 +66,34 @@ header {
 
 .header-content {
   background-color: #fff;
+  padding: 25px 0;
 }
 
 .header-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
 }
 
 .header-grid nav {
   justify-self: center;
 }
 
-.header-grid .wallet {
+.wallet {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul{
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--app-blue);
+  cursor: pointer;
+  font-weight: 600;
 }
