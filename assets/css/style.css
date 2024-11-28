@@ -20,6 +20,14 @@ html {
   display: flex;
 }
 
+.flex-between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 .center {
   justify-content: center;
 }
@@ -35,10 +43,30 @@ html {
 main {
   background: linear-gradient(var(--app-lighter-gray), var(--app-gray));
   color: var(--app-dark-gray);
+  height: auto;
 }
 
 .product {
   width: 100%;
+  height: auto;
   background-color: var(--app-gray);
 }
 
+.product-image {
+  padding: 20px;
+  img {
+    height: 400px;
+    width: 300px;
+  }
+}
+
+.product-title {
+  padding: 20px;
+  .sold {
+    font-size: 0.8rem;
+  }
+}
+
+.product-info {
+  padding: 20px;
+}
