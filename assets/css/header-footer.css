@@ -6,6 +6,24 @@
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
 }
+
 .sticky-header {
   background-color: var(--app-blue);
+  padding: 10px 0;
+}
+
+.sticky-header-content {
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+}
+
+.add-cart-btn {
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  background-color: var(--app-green);
+  border: none;
 }
