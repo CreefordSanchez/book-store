@@ -9,6 +9,7 @@
 
 .sticky-header {
   background-color: var(--app-blue);
+  background-color: #334750;
   padding: 10px 0;
 }
 
@@ -20,6 +21,7 @@
 
 .add-cart-btn {
   background-color: var(--app-green);
+  background-color: #31AF36;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -39,4 +41,5 @@
 
 .hide-panel-btn {
   font-size: 20px;
+  color: var(--app-gray);
 }
