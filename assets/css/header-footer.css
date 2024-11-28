@@ -2,9 +2,10 @@
 
 @import url(./color.css);
 
-.header-sticky {
-  background-color: var(--app-blue);
-
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
 }
-
-/*test*/
+.sticky-header {
+  background-color: var(--app-blue);
+}
