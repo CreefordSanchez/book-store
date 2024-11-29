@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import url('./assets/color.css');
 @import url(./header-footer.css);
 
 * {
@@ -8,16 +9,165 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: min(100% - 30px, 1080px);
-  margin-inline: auto;
+/*--------------------------------------------*/
+/*Poster banner                               */
+/*--------------------------------------------*/
+
+.poster-box {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  position:relative;
+  background-color: antiquewhite;
+  background: url(../media/img/poster-banner1.jpg) center center / cover no-repeat;
+
+  h1 {
+    margin: 20px 0;
+    font-size: 70px;
+    color: #ff1100;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 30px;
+  }
 }
 
-/* Hero banner container */
+.pick-one-now {
+  position: absolute;
+  inset: auto auto 50px;
+  width:150px;
+  height:50px;
+  border-radius: 10px;
+  background-color: #f75045;
+  color:#fff;
+  font-size: 16px;
+  border: 1px solid #f75045;
+  cursor: pointer;
+}
+
+.pick-one-now:hover {
+  background-color:  #ff695e;
+  transition: ease-in-out 0.25s;
+}
+
+/*--------------------------------------------*/
+/*New book                                    */
+/*--------------------------------------------*/
+
+.new-product-box {
+  width: 100%;
+  height: 1000px;
+  background-color: #fff;
+  position:relative;
+  z-index: -1;
+
+  h2 {
+    position:absolute;
+    inset: 150px auto auto 100px;
+    font-size: 50px;
+  }
+}
+
+.new-product-intro {
+  position:absolute;
+  inset: auto auto 100px 0;
+  width: 80%;
+  height: 600px;
+  background-color: #456480;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1;
+  display:grid;
+  align-items: center;
+
+  .text {
+    padding-left: 100px;
+    width:600px;
+    height:200px;
+    display: grid;
+    font-size: 25px;
+    color: #fff;
+  }
+}
+
+.new-product-btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  background-color: var(--app-lighter-gray);
+  color: #f75045;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.new-book-display {
+  display: grid;
+  justify-items: end;
+  position: absolute;
+  inset: 200px 100px auto auto;
+  width: 700px;
+  height: 700px;
+  z-index: 2;
+}
+
+.new-book {
+  display: flex;
+  width:100%;
+  height: 300px;
+  background-color: var(--app-lighter-gray);
+  border-radius: 20px;
+}
+
+.book-img {
+  padding:20px;
+  width: 30%;
+  height: auto;
+}
+
+.book-intro {
+  padding:20px;
+  display:grid;
+  width: 70%;
+  height: auto;
+  align-items: center;
+
+  .new {
+    width: 60px;
+    height: 30px;
+    background-color:#f75045;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 20px;
+    color:#1d86f0;
+  }
+}
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+/*--------------------------------------------*/
+/*Hero banner container                        */
+/*--------------------------------------------*/
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: auto;
   overflow: hidden;
   background-color: #E5E5E5;
   display: flex; 
@@ -59,8 +209,7 @@
 
 .slide-right img {
   max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 60%;
   margin-right: 25%;
 }
 
@@ -81,7 +230,7 @@
   width: 25%;
   margin-top: 50px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #31AF36;
   color: #fff;
   font-size: 1rem;
   text-align: center;
@@ -91,7 +240,7 @@
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #026423;
 }
 
 .prev, .next {
@@ -139,18 +288,19 @@
   background-color: #007bff;
 }
 
-
 html {
   font-family: "Poppins", sans-serif;
 }
-
-/* Featured category container */
+/*--------------------------------------------*/
+/*Featured category container                 */
+/*--------------------------------------------*/
 .featured-category {
   background-color: #fff;
 }
+
 .featured-category h1{
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .categories {
@@ -233,4 +383,32 @@ html {
 
 .details a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .slide-left {
+    margin: 0; 
+    padding: 20px; 
+    width: 90%; 
+  }
+
+  .slide-right {
+    margin: 20px 0; 
+    width: 90%; 
+  }
+
+  .slide-right img {
+    height: auto; 
+    max-width: 100%; 
+  }
+
+  .btn {
+    width: 70%; 
+  }
 }
