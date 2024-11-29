@@ -229,7 +229,7 @@
   width: 25%;
   margin-top: 50px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #31AF36;
   color: #fff;
   font-size: 1rem;
   text-align: center;
@@ -239,7 +239,7 @@
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #026423;
 }
 
 .prev, .next {
