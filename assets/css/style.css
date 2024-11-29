@@ -12,7 +12,7 @@
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
 }
-
+/* Hero banner container */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -62,17 +62,17 @@
   object-fit: cover;
 }
 
-h2 {
+.slide h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-p {
+.slide p {
   margin: 20px 0;
   min-height: 60px;
   width: 70%;
   font-size: 1.2rem;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 .btn {
@@ -141,4 +141,91 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+/* Featured category container */
+.featured-category h1{
+  text-align: center;
+  margin-top: 30px;
+}
 
+.categories {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category {
+  width: 200px; 
+  height: 280px; 
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; 
+  transition: box-shadow 0.6s, z-index 0.6s;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out;
+}
+
+
+.category:hover .image-container img {
+  transform: scale(0.7); 
+}
+
+
+
+.category:hover h2 {
+  transform: translateY(-30px); 
+}
+
+.category:hover .details {
+  transform: translateY(-30px); 
+}
+
+.category h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.category h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+  transition: transform 0.6s ease;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+}
+
+.category:hover .details {
+  display: block;
+}
+
+.details a {
+  display: block;
+  color: #050505;
+  text-decoration: none;
+  margin-top: 0;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.details a:hover {
+  text-decoration: underline;
+}
