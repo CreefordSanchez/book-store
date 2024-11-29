@@ -184,7 +184,7 @@ footer {
   width: 50%;
 }
 
-.newsletter-projects {
+.new-project-container {
   display: flex;
   gap: 15px;
 }
@@ -224,6 +224,11 @@ footer {
   font-weight: 400;
   font-size: 13px;
   cursor: pointer;
+}
+
+.new-project-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-info {
@@ -343,6 +348,7 @@ main {
 }
 
 @media screen and (max-width: 1044px) {
+
   .foot-title-and-links, .newsletter {
     p { font-size: 14px; }
     a { font-size: 14px; }
@@ -360,5 +366,44 @@ main {
     height: 39px;
     width: 39px;
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .footer-content.container {
+    width: min(100% - 10px, 500px);
+  }
+  .footer-content {
+    display: grid;
+  }
+
+  .foot-title-and-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .links {
+    width: 205px;
+  }
+
+  .news-and-form {
+    width: 100%;
+  }
+
+  .new-project-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .projects {
+    width: 205px;
+    justify-self: end;
+  }
+
+  .email-input {
+    width: 100%;
   }
 }
