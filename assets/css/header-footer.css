@@ -300,3 +300,8 @@ footer {
 .pinterest-icon {
   background-color: #E60023;
 }
+
+/* Media Querys */
+@media screen and (max-width: 900px) {
+  
+}
