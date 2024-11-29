@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <title>Formal Negotiation | Odyssey books</title>
+    <link rel="stylesheet" href="./assets/css/shopping.css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
@@ -12,18 +12,46 @@
     <script src="./assets/js/app.js" type="module"></script>
   </head>
   <header>
-
+    <div class="sticky-header">
+      <div class="sticky-header-content container">
+        <button class="add-cart-btn">
+          Add Cart
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button class="download-btn">Get Downloads</button>
+        <a class="hide-panel-btn">
+          <i class="fa-solid fa-angle-up"></i>
+        </a>
+      </div>
+    </div>
+    <div class="header-content">
+      <div class="header-grid container">
+        <h1>Odsesey Books</h1>
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Shop</a></li>
+          </ul>
+        </nav>
+        <div class="wallet">
+          <p>$0.00</p>
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
   </header>
   <body>
     <main>
-      <div class="container flex left">
+      <div class="container flex center">
         <div class="product flex center wrap">
           <div class="product-image center">
-            <img src="./assets/img/negotiation-cover.png">
+            <img src="./assets/media/img/negotiation-cover.png">
           </div>
           <div class="product-title">
             <h2>Formal Negotiation</h2>
-            <p class="sold">Over 24 copies sold!</p>
+            <p class="sold">Over 2,532 copies sold!</p>
             <p class="rating">Rating: 4.3 <i class="fa-solid fa-star"></i></p>
             <p>Author: Jeremy Ymerej</p>
             <p>Published: September 10, 2003</p>
@@ -32,6 +60,9 @@
               <button class="buy-now">Buy now</button>
               <button class="add-cart">Add to cart</button>
               <button class="share"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+            </div>
+            <div class="reading-list">
+              <button class="add-to-read">Add to reading list</button>
             </div>
           </div>
           <div class="product-info flex">
@@ -55,10 +86,84 @@
                 <span class="bold">Formal Negotiation</span> is a gripping tale of power dynamics, ambition, and the delicate balance between risk and 
                 reward, perfect for fans of sharp, suspenseful corporate drama.
               </p>
+              <div>
+                <h2>Frequently bought with:</h2>
+              </div>
             </span>
+          </div>
+            <div class="recommend-items flex left">
+              <div class="recommend-image">
+                <img src="./assets/media/img/true-crime-cover.png">
+                <p>Dead of Night</p>
+                <p class="rating">4.9<i class="fa-solid fa-star"></i></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+    <footer>
+      <div class="footer-content container">
+        <div class="foot-title-and-links">
+          <div class="foot-title">
+            <h2>Odsesey Books</h2>
+            <p>
+              Discover your next great read at Odsesey Books – your one-
+              stop shop for books that inspire, entertain, and educate. 
+              Happy reading!
+            </p>
+            <p>
+              Explore a wide range of genres and find the perfect book for every 
+              reader. Fast shipping, secure checkout, and a love for all things 
+              literature. Join our book-loving community today!
+            </p>
+          </div>
+
+          <div class="links">
+            <h2>USEFUL LINKS</h2>
+            <div class="foot-links-list">
+              <ul>
+                <li><a href="">General Information for Users</a></li>
+                <li><a href="">Interactive Fairy Tales</a></li>
+                <li><a href="">Official Story Book Marker</a></li>
+                <li><a href="">Basic Knowledge Website</a></li>
+                <li><a href="">Privacy & Policy Condition</a></li>
+                <li><a href="">Terms & Conditions Life</a></li>
+              </ul>            
+            </div>
+          </div>
+        </div>
+
+        <div class="news-and-form">
+          <div class="newsletter-projects">
+            <div class="newsletter">
+              <h2>Newsletter</h2>
+              <p>
+                Sign up for our newsletter to get the latest book releases, 
+                special offers, and more, delivered straight to your inbox
+              </p>
+            </div>
+            <div class="projects">
+              <h2>Latest Projects</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                 Eligendi quod sequi odit voluptas excepturi illum laborum 
+                 dignissimos architecto quibusdam rem! Labore vero autem incidunt, nulla atque a doloremque sapiente quas.</p>
+            </div>
+          </div>
+          <div class="email-input">
+            <form>
+              <div class="input-and-btn">
+                <input type="text" placeholder="Example@gmail.com">
+                <button class="subscribe-btn">SUBSCRIBE</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links">
+
+      </div>
+    </footer>
   </body>
 </html>
