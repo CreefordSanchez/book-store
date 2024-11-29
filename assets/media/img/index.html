@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Banner Slider</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .hero-banner {
+      position: relative;
+      width: 100%; /* Make the banner full-width */
+      height: 100vh;
+      overflow: hidden;
+      box-shadow: none;
+    }
+
+    .slides {
+      display: flex;
+      width: 60%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      display: flex;
+      width: 60%;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .slide-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center vertically */
+      padding: 40px;
+      flex: 2; /* Take up equal space as the right section */
+      text-align: left;
+      background-color: #df5e0e;
+    }
+
+    .slide-right {
+      flex: 1; /* Take up equal space as the left section */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide-right img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Navigation Arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Dots Navigation */
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-banner">
+    <div class="slides">
+      <!-- Clone of the last slide for seamless transition -->
+      <div class="slide">
+        <h2>Technology Trends</h2>
+        <p>Shape the future with innovation</p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+      <!-- Hero Banner 1 -->
+      <div class="slide">
+        <h2>Closer Together</h2>
+        <p>By Sophie Grégoire Trudeau</p>
+        <a href="#" class="btn">Explore now</a>
+      </div>
+      <!-- Hero Banner 2 -->
+      <div class="slide">
+        <h2>Discover Nature</h2>
+        <p>Explore the beauty of the world</p>
+        <a href="#" class="btn">Learn more</a>
+      </div>
+      <!-- Hero Banner 3 -->
+      <div class="slide">
+        <h2>Technology Trends</h2>
+        <p>Shape the future with innovation</p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+      <!-- Clone of the first slide for seamless transition -->
+      <div class="slide">
+        <h2>Closer Together</h2>
+        <p>By Sophie Grégoire Trudeau</p>
+        <a href="#" class="btn">Explore now</a>
+      </div>
+    </div>
+    <!-- Navigation Arrows -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <!-- Dots Navigation -->
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+  <script>
+    let currentIndex = 1; // 当前显示的幻灯片索引
+    const slides = document.querySelector(".slides");
+    const totalSlides = document.querySelectorAll(".slide").length;
+    const dots = document.querySelectorAll(".dot");
+    let autoSlideTimer; // 定时器
+    let lastClickTime = 0; // 记录上次点击时间
+  
+    // 显示指定幻灯片
+    function showSlide(index) {
+      const slideWidth = 100; // 每个幻灯片占宽度的100%
+      slides.style.transition = "transform 0.5s ease-in-out";
+      slides.style.transform = `translateX(-${index * slideWidth}%)`;
+  
+      // 更新导航点
+      dots.forEach(dot => dot.classList.remove("active"));
+      const actualIndex = (index === 0) ? 3 : (index === totalSlides - 1) ? 1 : index;
+      dots[actualIndex - 1].classList.add("active");
+    }
+  
+    // 循环播放逻辑
+    slides.addEventListener("transitionend", () => {
+      if (currentIndex === 0) {
+        slides.style.transition = "none";
+        currentIndex = totalSlides - 2; // 跳到最后一个实际幻灯片
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      } else if (currentIndex === totalSlides - 1) {
+        slides.style.transition = "none";
+        currentIndex = 1; // 跳到第一个实际幻灯片
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    });
+  
+    // 切换到下一张或上一张
+    function moveSlide(step) {
+  const currentTime = new Date().getTime();
+  // 如果上次点击和这次点击的间隔小于0.5秒，禁止继续点击
+  if (currentTime - lastClickTime < 500) {
+    return; // 禁止快速点击
+  }
+
+  currentIndex += step;
+  showSlide(currentIndex);
+  resetAutoSlide(); // 手动操作后重置定时器
+  lastClickTime = currentTime; // 更新上次点击时间
+}
+  
+    // 跳转到指定幻灯片
+    function currentSlide(index) {
+      currentIndex = index;
+      showSlide(currentIndex);
+      resetAutoSlide(); // 手动操作后重置定时器
+    }
+  
+    // 自动播放逻辑
+    function startAutoSlide() {
+      autoSlideTimer = setInterval(() => {
+        moveSlide(1); // 自动切换到下一张
+      }, 5000); // 每隔5秒播放
+    }
+  
+    function resetAutoSlide() {
+      clearInterval(autoSlideTimer); // 清除当前定时器
+      startAutoSlide(); // 启动新的定时器
+    }
+  
+    // 页面可见性监听
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        // 页面可见时启动轮播
+        startAutoSlide();
+      } else {
+        // 页面不可见时暂停轮播
+        clearInterval(autoSlideTimer);
+      }
+    });
+  
+    // 初始化
+    showSlide(currentIndex);
+    startAutoSlide(); // 页面加载时启动轮播
+
+    dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => currentSlide(index + 1));
+});
+  </script>
+  
+    
+</body>
+</html>
