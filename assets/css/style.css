@@ -13,18 +13,6 @@
   margin-inline: auto;
 }
 
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-}
-
 .hero-banner {
   position: relative;
   width: 100%;
@@ -76,12 +64,12 @@ body {
 
 h2 {
   font-size: 2rem;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 p {
-  margin-top: 20px;
-  height: 60px;
+  margin: 20px 0;
+  min-height: 60px;
   width: 70%;
   font-size: 1.2rem;
   line-height: 1.5
