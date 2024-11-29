@@ -61,6 +61,7 @@ header {
 .product-page-link img{
   width: 80px;
 }
+
 .sticky-nav p {
   display: flex;
   align-items: center;
@@ -115,6 +116,11 @@ nav a {
   color: var(--app-blue);
   cursor: pointer;
   font-weight: 600;
+  transition: 0.5s ease;
+}
+
+nav a:hover {
+  color: #1877F2;
 }
 
 /* Footer */
