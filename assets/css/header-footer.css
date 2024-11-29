@@ -55,7 +55,7 @@ header {
 }
 
 .product-page-link h1 {
-  color: var(--app-dark-gray);
+  color: #000;
 }
 
 .product-page-link img{
