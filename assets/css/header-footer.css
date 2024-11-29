@@ -29,6 +29,7 @@ header {
 .sticky-header {
   position: fixed;
   top: 0;
+  z-index: 11;
   width: 100%;
   background-color: var(--app-blue);
   padding: 10px 0;
