@@ -31,6 +31,7 @@ header {
 .sticky-header {
   position: fixed;
   top: 0;
+  z-index: 11;
   width: 100%;
   background-color: var(--app-blue);
   padding: 10px 0;
@@ -38,8 +39,21 @@ header {
 
 .sticky-header-content {
   display: flex;
-  gap: 30px;
-  justify-content: end;
+  justify-content: space-between;
+}
+
+.sticky-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sticky-nav p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--app-white);
+  cursor: pointer;
 }
 
 .add-cart-btn {
@@ -51,24 +65,13 @@ header {
   padding: 15px 25px;
   display: flex;
   gap: 10px;
-  color: #fff;
+  color: var(--app-white);
   font-weight: 700;
 }
 
-.download-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 15px 25px;
-}
-
-.hide-panel-btn {
-  font-size: 20px;
-  color: var(--app-gray);
-}
-
+/* Header contents */
 .header-content {
-  background-color: #fff;
+  background-color: var(--app-white);
   padding: 25px 0;
 }
 
@@ -111,6 +114,7 @@ footer {
 
   li, a {
     text-decoration: none;
+    color: var(--app-gray);
   }
 }
 
@@ -118,10 +122,11 @@ footer {
   display: flex;
   justify-content: center;
   gap: 50px;
+  padding: 30px 0;
 
   h2 {
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--app-white);
   }
 
   p, a {
@@ -152,6 +157,7 @@ footer {
 .foot-title, .links {
   width: 50%;
 }
+
 /* Email Input, project, and newsllet*/
 .news-and-form {
   width: 50%;
@@ -160,6 +166,14 @@ footer {
 .newsletter-projects {
   display: flex;
   gap: 15px;
+}
+
+.newsletter {
+  width: 50%;
+}
+
+.projects {
+  width: 50%;
 }
 
 .input-and-btn {
@@ -189,4 +203,102 @@ footer {
   font-weight: 400;
   font-size: 13px;
   cursor: pointer;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-info p {
+  font-size: 14px;
+}
+.project-info p:nth-child(3) {
+  color: var(--app-gray);
+}
+
+.project-img-circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  padding: 5px;
+  background-color: var(--app-orange);
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../media/img/reading-books.jpg);
+  background-size: cover;
+  border-radius: 40px;
+}
+
+.project-info:nth-of-type(1) {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--app-dark-gray);
+} 
+
+.project-info:nth-of-type(2) .project-img {
+  background-image: url(../media/img/three-peep-reading.jpg);
+}
+
+/* footer links and copyright */
+.footer-links {
+  background-color: var(--app-blue);
+  padding: 20px 0;
+}
+
+.footer-links h3 {
+  color: var(--app-gray);
+  font-size: 18px;
+}
+
+.footer-links-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 20px;
+    justify-self: center;
+  }
+
+  a {
+    color: var(--app-gray);
+  }
+}
+
+.media-links {
+  justify-self: end;
+  display: flex;
+  gap: 20px;
+}
+
+.media-icons {
+  height: 42px;
+  width: 42px;
+  border-radius: 21px;
+  color: var(--app-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook-icon {
+  background-color: #1877F2;
+}
+
+.linkedin-icon {
+  background-color: #2164F4;
+}
+
+.x-link-icon {
+  background-color: var(--app-dark-gray);
+}
+
+.pinterest-icon {
+  background-color: #E60023;
 }

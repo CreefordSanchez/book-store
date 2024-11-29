@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odyssey</title>
+    <title>Odyssey Books</title>
     <link rel="stylesheet" href="./assets/css/style.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    <script src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/app.js" defer></script> 
   </head>
   <body>
     <header>
@@ -19,15 +19,16 @@
             Add Cart
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
-          <button class="download-btn">Get Downloads</button>
-          <a class="hide-panel-btn">
-            <i class="fa-solid fa-angle-up"></i>
-          </a>
+          <div class="sticky-nav">
+            <p><i class="fa-regular fa-user"></i> Login</p>
+            <p><i class="fa-solid fa-gear"></i> Register</p>
+            <p><i class="fa-regular fa-heart"></i> WishList</p>
+          </div>
         </div>
       </div>
       <div class="header-content">
         <div class="header-grid container">
-          <h1>Odsesey Books</h1>
+          <h1>Odyssey Books</h1>
           <nav>
             <ul>
               <li><a href="">Home</a></li>
@@ -44,6 +45,189 @@
       </div>
     </header>
     <main>
+        <!-- Hero banner -->
+    <div class="hero-banner">
+      <div class="slides">
+        <div class="slide">
+          <div class="slide-left">
+            <h2>Crazy Conspiracies</h2>
+            <p>Crazy Conspiracies is a mind-bending journey through the world of bizarre 
+              theories and outlandish beliefs.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+          <div class="slide-right">
+            <img src="./assets/media/img/crazy-conspiracies-cover.png" alt="Image Description">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-left">
+            <h2>Fixing the Future</h2>
+            <p>Crazy Conspiracies is a mind-bending journey through the world of bizarre 
+              theories and outlandish beliefs.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+          <div class="slide-right">
+            <img src="./assets/media/img/fixing-future-cover.png" alt="Image Description">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-left">
+            <h2>Normal Negotiation</h2>
+            <p>Crazy Conspiracies is a mind-bending journey through the world of bizarre 
+              theories and outlandish beliefs.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+          <div class="slide-right">
+            <img src="./assets/media/img/negotiation-cover.png" alt="Image Description">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-left">
+            <h2>Crazy Conspiracies</h2>
+            <p>Crazy Conspiracies is a mind-bending journey through the world of bizarre 
+              theories and outlandish beliefs.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+          <div class="slide-right">
+            <img src="./assets/media/img/crazy-conspiracies-cover.png" alt="Image Description">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-left">
+            <h2>Fixing the Future</h2>
+            <p>Crazy Conspiracies is a mind-bending journey through the world of bizarre 
+              theories and outlandish beliefs.</p>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+          <div class="slide-right">
+            <img src="./assets/media/img/fixing-future-cover.png" alt="Image Description">
+          </div>
+        </div>
+      </div>
+      <button class="prev" aria-label="Previous Slide">&#10094;</button>
+      <button class="next" aria-label="Next Slide">&#10095;</button>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>   
+
+    <section class="featured-category">
+      <h1>Featured Categories</h1>
+      <div class="categories">       
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/childrenbook.jpg" alt="Children's Books">
+              </div>
+              <h2>Children's Books</h2>
+              <div class="details">
+                  <a href="#">Literature & Fiction for Kids</a>
+                  <a href="#">Activities, Crafts & Games</a>
+                  <a href="#">Children's Geography Books</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/cooking.jpg" alt="Textbooks">
+              </div>
+              <h2>Cooking</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/health.jpg" alt="Textbooks">
+              </div>
+              <h2>Health</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/history.jpg" alt="Textbooks">
+              </div>
+              <h2>History</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/home.jpg" alt="Textbooks">
+              </div>
+              <h2>Home</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/romance.jpg" alt="Textbooks">
+              </div>
+              <h2>Romance</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/science fiction.jpg" alt="Textbooks">
+              </div>
+              <h2>Science Fiction</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/society.jpg" alt="Textbooks">
+              </div>
+              <h2>Society</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/science.jpg" alt="Textbooks">
+              </div>
+              <h2>Science</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+          <div class="category" onclick="window.location.href='#'">
+              <div class="image-container">
+                  <img src="./assets/media/img/technical.jpg" alt="Textbooks">
+              </div>
+              <h2>Technical</h2>
+              <div class="details">
+                  <a href="#">Science & Math Textbooks</a>
+                  <a href="#">History & Social Studies</a>
+                  <a href="#">Language Learning</a>
+              </div>
+          </div>
+      </div>
+    </section>
       <section class="poster-box"></section>
       <section class="new-product-box"></section>
     </main>
@@ -51,9 +235,9 @@
       <div class="footer-content container">
         <div class="foot-title-and-links">
           <div class="foot-title">
-            <h2>Odsesey Books</h2>
+            <h2>Odyssey Books</h2>
             <p>
-              Discover your next great read at Odsesey Books – your one-
+              Discover your next great read at Odyssey Books – your one-
               stop shop for books that inspire, entertain, and educate. 
               Happy reading!
             </p>
@@ -90,11 +274,26 @@
             </div>
             <div class="projects">
               <h2>Latest Projects</h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                 Eligendi quod sequi odit voluptas excepturi illum laborum 
-                 dignissimos architecto quibusdam rem! Labore vero autem incidunt, nulla atque a doloremque sapiente quas.</p>
-            </div>
+
+              <div class="project-info">
+                <div class="project-img-circle">
+                  <div class="project-img"></div>
+                </div>
+                <div class="project-text">
+                  <p>Virtual Book Club Platform</p>
+                  <p>May, 09, 2024</p>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-img-circle">
+                  <div class="project-img"></div>
+                </div>
+                <div class="project-text">
+                  <p>Norm Book Club</p>
+                  <p>Sep, 27, 2020</p>
+                </div>
+              </div>
+            </div> 
           </div>
           <div class="email-input">
             <form>
@@ -107,7 +306,29 @@
         </div>
       </div>
       <div class="footer-links">
-
+        <div class="footer-links-content container">
+          <h3>Copyright &copy; Odyssey Books</h3>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Shop</a></li>
+          </ul>
+          <div class="media-links">
+            <div class="facebook-icon media-icons">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="linkedin-icon media-icons">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="x-link-icon media-icons">
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+            <div class="pinterest-icon media-icons">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
