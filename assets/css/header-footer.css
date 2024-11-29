@@ -89,18 +89,10 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-
 }
 
 .header-grid nav {
   justify-self: center;
-}
-
-.wallet {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 nav ul{
@@ -117,6 +109,19 @@ nav a {
 
 nav a:hover {
   color: #1877F2;
+}
+
+.wallet {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fa-bars:before {
+  display: none;
+  margin-left: 8px;
+  font-size: 23px;
 }
 
 /* Footer */
@@ -319,6 +324,17 @@ footer {
 }
 
 /* Media Querys */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+  .header-grid {
+    display: flex;
+    justify-content: space-between;
+  }
   
+  nav {
+    display: none;
+  }
+
+  .fa-bars::before {
+    display: inline;
+  }
 }
