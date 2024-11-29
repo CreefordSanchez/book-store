@@ -288,7 +288,6 @@
   background-color: #007bff;
 }
 
-
 html {
   font-family: "Poppins", sans-serif;
 }
@@ -297,6 +296,7 @@ html {
 .featured-category {
   background-color: #fff;
 }
+
 .featured-category h1{
   text-align: center;
   padding-top: 30px;
