@@ -65,6 +65,7 @@ header {
   color: var(--app-gray);
 }
 
+/* Header contents */
 .header-content {
   background-color: #fff;
   padding: 25px 0;
@@ -109,6 +110,7 @@ footer {
 
   li, a {
     text-decoration: none;
+    color: var(--app-gray);
   }
 }
 
@@ -116,6 +118,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 50px;
+  padding: 30px 0;
 
   h2 {
     margin-bottom: 20px;
@@ -150,6 +153,7 @@ footer {
 .foot-title, .links {
   width: 50%;
 }
+
 /* Email Input, project, and newsllet*/
 .news-and-form {
   width: 50%;
@@ -187,4 +191,70 @@ footer {
   font-weight: 400;
   font-size: 13px;
   cursor: pointer;
+}
+
+.project-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  padding: 3px;
+  background-color: var(--app-orange);
+}
+/* footer links and copyright */
+.footer-links {
+  background-color: var(--app-blue);
+  padding: 20px 0;
+}
+
+.footer-links h3 {
+  color: var(--app-gray);
+  font-size: 18px;
+}
+
+.footer-links-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 20px;
+    justify-self: center;
+  }
+
+  a {
+    color: var(--app-gray);
+  }
+}
+
+.media-links {
+  justify-self: end;
+  display: flex;
+  gap: 20px;
+}
+
+.media-icons {
+  height: 42px;
+  width: 42px;
+  border-radius: 21px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook-icon {
+  background-color: #1877F2;
+}
+
+.linkedin-icon {
+  background-color: #2164F4;
+}
+
+.x-link-icon {
+  background-color: var(--app-dark-gray);
+}
+
+.pinterest-icon {
+  background-color: #E60023;
 }
