@@ -48,6 +48,10 @@ header {
   gap: 15px;
 }
 
+.product-page-link h1 {
+  color: var(--app-dark-gray);
+}
+
 .sticky-nav p {
   display: flex;
   align-items: center;
