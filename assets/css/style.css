@@ -17,7 +17,7 @@
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: auto;
   overflow: hidden;
   background-color: #E5E5E5;
   display: flex; 
@@ -59,8 +59,7 @@
 
 .slide-right img {
   max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 60%;
   margin-right: 25%;
 }
 
@@ -150,7 +149,7 @@ html {
 }
 .featured-category h1{
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .categories {
@@ -233,4 +232,32 @@ html {
 
 .details a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .slide-left {
+    margin: 0; 
+    padding: 20px; 
+    width: 90%; 
+  }
+
+  .slide-right {
+    margin: 20px 0; 
+    width: 90%; 
+  }
+
+  .slide-right img {
+    height: auto; 
+    max-width: 100%; 
+  }
+
+  .btn {
+    width: 70%; 
+  }
 }
