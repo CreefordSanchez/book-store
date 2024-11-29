@@ -12,6 +12,7 @@
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
 }
+
 /* Hero banner container */
 .hero-banner {
   position: relative;
@@ -78,7 +79,7 @@
 
 .btn {
   width: 25%;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
