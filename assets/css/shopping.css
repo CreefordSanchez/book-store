@@ -1,0 +1,221 @@
+@charset "utf-8";
+@import url('./color.css');
+@import url('./header-footer.css');
+
+/* Base rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(var(--app-lighter-gray), var(--app-gray));
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+/* utilities */
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: right;
+}
+
+.left {
+  justify-content: left;
+}
+
+/* main content for this page */
+main {
+  color: var(--app-dark-gray);
+  height: 100%;
+  width: calc(100%);
+}
+
+span {
+  div {
+    margin-top: 30px;
+  }
+}
+
+.product, .recommend-items {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 100%;
+  height: auto;
+}
+
+/* Product */
+.product-image {
+  padding: 20px;
+  img {
+    height: 400px;
+    width: 300px;
+    margin: auto;
+  }
+}
+
+.product-title {
+  padding: 20px;
+  .sold {
+    font-size: 0.8rem;
+  }
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.fa-star {
+  color: var(--app-orange);
+}
+
+.fa-arrow-up-from-bracket {
+  color: #737373;
+}
+
+/* info */
+.product-description {
+  p {
+    margin-top: 10px;
+  }
+}
+
+.purchase-options {
+  padding: 25px 0 0 0;
+}
+
+/* buttons */
+.purchase-options button {
+  padding: 15px 18px 15px 18px;
+  border-radius: 25px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.reading-list button {
+  padding: 15px 18px 15px 18px;
+  border-radius: 25px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.buy-now {
+  background-color: var(--app-dark-gray);
+  color: var(--app-lighter-gray);
+  transition: 0.2s ease-in-out;
+}
+
+.buy-now:hover {
+  background-color: rgb(48, 48, 48);
+  transition: 0.2s ease-in-out;
+}
+
+.add-cart {
+  background-color: var(--app-blue);
+  color: var(--app-lighter-gray);
+  transition: 0.2s ease-in-out;
+}
+
+.add-cart:hover {
+  background-color: #28383f;
+  transition: 0.2s ease-in-out;
+}
+
+.share {
+  background-color: var(--app-lighter-gray);
+  color: var(--app-dark-gray);
+  transition: 0.2s ease-in-out;
+}
+
+.share:hover {
+  background-color: var(--app-dark-gray);
+  color: var(--app-lighter-gray);
+  transition: 0.2s ease-in-out;
+}
+
+.add-to-read {
+  text-align: center;
+  margin-top: 40px;
+  background-color: var(--app-green);
+  color: var(--app-lighter-gray);
+  transition: 0.2s ease-in-out;
+  width: 300px
+}
+
+.add-to-read:hover {
+  background-color: rgb(1, 79, 1);
+  color: var(--app-lighter-gray);
+  transition: 0.2s ease-in-out;
+}
+
+/* Frequently bought with ... */
+.recommend-items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.recommend-image {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 200px;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  p {
+    margin: 0 10px 0 10px;
+  }
+}
+
+/* added responsive design */
+@media (max-width: 600px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 400px) {
+  .recommend-image {
+    width: 155px;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
