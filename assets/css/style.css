@@ -155,6 +155,8 @@
     font-size: 20px;
     color:#1d86f0;
   }
+}
+
 .container {
   width: min(100% - 30px, 1200px);
   margin-inline: auto;
