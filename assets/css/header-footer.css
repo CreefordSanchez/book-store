@@ -37,8 +37,21 @@ header {
 
 .sticky-header-content {
   display: flex;
-  gap: 30px;
-  justify-content: end;
+  justify-content: space-between;
+}
+
+.sticky-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sticky-nav p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--app-white);
+  cursor: pointer;
 }
 
 .add-cart-btn {
@@ -50,25 +63,13 @@ header {
   padding: 15px 25px;
   display: flex;
   gap: 10px;
-  color: #fff;
+  color: var(--app-white);
   font-weight: 700;
-}
-
-.download-btn {
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 15px 25px;
-}
-
-.hide-panel-btn {
-  font-size: 20px;
-  color: var(--app-gray);
 }
 
 /* Header contents */
 .header-content {
-  background-color: #fff;
+  background-color: var(--app-white);
   padding: 25px 0;
 }
 
@@ -123,7 +124,7 @@ footer {
 
   h2 {
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--app-white);
   }
 
   p, a {
@@ -278,7 +279,7 @@ footer {
   height: 42px;
   width: 42px;
   border-radius: 21px;
-  color: #fff;
+  color: var(--app-white);
   display: flex;
   justify-content: center;
   align-items: center;
