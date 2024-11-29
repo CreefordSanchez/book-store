@@ -2,6 +2,8 @@
 
 @import url(./color.css);
 
+@import url(./header-footer.css);
+
 /**/
 body {
   background-color: var(--app-gray);
@@ -44,6 +46,10 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.product-page-link h1 {
+  color: var(--app-dark-gray);
 }
 
 .sticky-nav p {
