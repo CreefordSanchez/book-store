@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+@import url(./color.css);
+
+/**/
+body {
+  background-color: var(--app-gray);
+}
+/**/
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+
+/* Header */
+header {
+  padding-top: 65px;
+
+  ul {
+    list-style: none;
+  }
+
+  li, a {
+    text-decoration: none;
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--app-blue);
+  padding: 10px 0;
+}
+
+.sticky-header-content {
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+}
+
+.add-cart-btn {
+  background-color: var(--app-green);
+  background-color: #31AF36;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.download-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px 25px;
+}
+
+.hide-panel-btn {
+  font-size: 20px;
+  color: var(--app-gray);
+}
+
+.header-content {
+  background-color: #fff;
+  padding: 25px 0;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+}
+
+.header-grid nav {
+  justify-self: center;
+}
+
+.wallet {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul{
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--app-blue);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: #1c272c;
+  
+  ul {
+    list-style: none;
+  }
+
+  li, a {
+    text-decoration: none;
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
+}
+
+/* Website Description and links */
+.foot-title-and-links {
+  display: flex;
+  gap: 15px;
+  width: 50%;
+}
+
+.foot-title p:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.foot-links-list a {
+  text-decoration: underline;
+}
+
+.foot-links-list li:nth-child(n + 2) {
+  margin-top: 8px;
+}
+
+.foot-title, .links {
+  width: 50%;
+}
+/* Email Input, project, and newsllet*/
+.news-and-form {
+  width: 50%;
+}
+
+.newsletter-projects {
+  display: flex;
+  gap: 15px;
+}
+
+.input-and-btn {
+  display: flex;
+  margin-top: 30px;
+}
+
+.input-and-btn input {
+  width: 75%;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: var(--app-blue);
+  color: var(--app-gray);
+}
+
+.subscribe-btn {
+  color: var(--app-gray);
+  width: 25%;
+  border: none;
+  background-color: var(--app-blue);
+  border-left: 1px solid var(--app-gray);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-weight: 400;
+  font-size: 13px;
+  cursor: pointer;
+}
