@@ -348,6 +348,15 @@ main {
 }
 
 @media screen and (max-width: 1044px) {
+  .add-cart-btn {
+    padding: 13px 23px;
+    font-size: 12px;
+  }
+  .sticky-header {
+    p {
+      font-size: 14px;
+    }
+  }
 
   .foot-title-and-links, .newsletter {
     p { font-size: 14px; }
