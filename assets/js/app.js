@@ -65,14 +65,6 @@ function resetAutoSlide() {
   startAutoSlide(); 
 }
 
-/*document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") {
-    startAutoSlide();
-  } else {
-    clearInterval(autoSlideTimer);
-  }
-});*/
-
 showSlide(currentIndex);
 startAutoSlide(); 
 
