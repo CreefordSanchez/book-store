@@ -161,8 +161,9 @@
   width: min(100% - 30px, 1200px);
   margin-inline: auto;
 }
-
-/* Hero banner container */
+/*--------------------------------------------*/
+/*Hero banner container                        */
+/*--------------------------------------------*/
 .hero-banner {
   position: relative;
   width: 100%;
@@ -290,8 +291,9 @@
 html {
   font-family: "Poppins", sans-serif;
 }
-
-/* Featured category container */
+/*--------------------------------------------*/
+/*Featured category container                 */
+/*--------------------------------------------*/
 .featured-category {
   background-color: #fff;
 }
