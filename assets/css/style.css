@@ -214,7 +214,7 @@
 }
 
 .slide h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -223,6 +223,7 @@
   min-height: 60px;
   width: 70%;
   font-size: 1.2rem;
+  font-style: italic;
   line-height: 1.5;
 }
 
@@ -233,6 +234,7 @@
   background-color: #31AF36;
   color: #fff;
   font-size: 1rem;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
@@ -247,12 +249,19 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
   border: none;
   padding: 20px 10px;
   cursor: pointer;
   z-index: 10;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.hero-banner:hover .prev, 
+.hero-banner:hover .next {
+  opacity: 1;  
 }
 
 .prev {
@@ -299,14 +308,15 @@ html {
 }
 
 .featured-category h1{
+  font-size: 2rem;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .categories {
   max-width: 1200px;
   margin: 0px auto;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -335,7 +345,6 @@ html {
   object-fit: cover;
   transition: transform 0.6s ease-in-out;
 }
-
 
 .category:hover .image-container img {
   transform: scale(0.7); 
