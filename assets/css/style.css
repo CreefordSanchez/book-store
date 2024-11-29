@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: center; 
   margin-left: 10%;
-  padding: 40px;
+  padding: 80px;
   flex: 1; 
   text-align: left;
 }
@@ -52,7 +52,7 @@
 .slide-right {
   flex: 1; 
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
 }
 
@@ -60,6 +60,7 @@
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-right: 25%;
 }
 
 .slide h2 {
@@ -76,11 +77,12 @@
 }
 
 .btn {
-  width: 20%;
+  width: 25%;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
@@ -95,10 +97,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 20px 10px;
   cursor: pointer;
   z-index: 10;
 }
@@ -142,15 +144,18 @@ html {
 }
 
 /* Featured category container */
+.featured-category {
+  background-color: #fff;
+}
 .featured-category h1{
   text-align: center;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .categories {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 10px;
+  margin: 0px auto;
+  padding: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -185,8 +190,6 @@ html {
   transform: scale(0.7); 
 }
 
-
-
 .category:hover h2 {
   transform: translateY(-30px); 
 }
@@ -211,6 +214,7 @@ html {
 .details {
   display: none;
   margin-top: 10px;
+  text-align: center;
 }
 
 .category:hover .details {
