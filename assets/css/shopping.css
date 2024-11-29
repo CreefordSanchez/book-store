@@ -119,7 +119,14 @@ span {
 }
 
 /* buttons */
-button {
+.purchase-options button {
+  padding: 15px 18px 15px 18px;
+  border-radius: 25px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.reading-list button {
   padding: 15px 18px 15px 18px;
   border-radius: 25px;
   border-style: none;
