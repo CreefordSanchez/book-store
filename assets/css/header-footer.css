@@ -320,6 +320,10 @@ footer {
   background-image: url(../media/img/three-peep-reading.jpg);
 }
 
+.print-error {
+  color: #ff0000;
+}
+
 /* footer links and copyright */
 .footer-links {
   background-color: var(--app-blue);
