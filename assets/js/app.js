@@ -3,11 +3,12 @@
 import { listen, select } from './data/utility.js';
 
 let currentIndex = 1; 
-const slides = document.querySelector(".slides");
-const totalSlides = document.querySelectorAll(".slide").length;
+const slides = select(".slides");
+const totalSlides = document.querySelectorAll(".slide").length; 
 const dots = document.querySelectorAll(".dot");
 let autoSlideTimer; 
 let lastClickTime = 0; 
+
 
 function showSlide(index) {
   const slideWidth = 100; 
@@ -20,7 +21,7 @@ function showSlide(index) {
   dots[actualIndex - 1].classList.add("active");
 }
 
-slides.addEventListener("transitionend", () => {
+listen(slides, "transitionend", () => {
   if (currentIndex === 0) {
     slides.style.transition = "none";
     currentIndex = totalSlides - 2; 
@@ -43,7 +44,7 @@ function preventFastClick() {
 
 function moveSlide(step) {
   if (preventFastClick()) return;
-
+  
   currentIndex += step;
   currentIndex = (currentIndex + totalSlides) % totalSlides; 
   showSlide(currentIndex);
@@ -71,8 +72,9 @@ showSlide(currentIndex);
 startAutoSlide(); 
 
 dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => currentSlide(index + 1));
+  listen(dot, "click", () => currentSlide(index + 1));
 });
 
-document.querySelector(".prev").addEventListener("click", () => moveSlide(-1));
-document.querySelector(".next").addEventListener("click", () => moveSlide(1));
+listen(select(".prev"), "click", () => moveSlide(-1));
+listen(select(".next"), "click", () => moveSlide(1));
+
