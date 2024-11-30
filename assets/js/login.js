@@ -34,7 +34,9 @@ listen(submitBtn, 'click', () => {
 
 listen(subscribeBtn, 'click', () => {
   let emailValue = email.value;
-
+  if (validateEmail(emailValue)) {
+    email.value = '';
+  }
 });
 
 form.forEach(form => {
@@ -44,11 +46,18 @@ form.forEach(form => {
 })
 
 function validateEmail(email) {
+  const emailTest = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]+(\.com|\.co)$/;
   if (email == '') {
     error.innerText = 'Enter an email';
     return false;
   }
 
+  if (!emailTest.test(email)) {
+    error.innerText = 'Example@gmail.com';
+    return false;
+  }
+
+  return true;
 }
 function validateLogin() {
   let passValue = pass.value;
