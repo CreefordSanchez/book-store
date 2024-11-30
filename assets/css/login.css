@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.login {
+  position: fixed;
+  top: 0;
+  z-index: 13;
+  height: 100vh;
+  width: 100%;
+  background-color: #00000050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content {
+  background-color: var(--app-gray);
+}
+
+.login-content h3 {
+  font-size: 30px;
+}
+
+.login-content form {
+  margin-top: 50px;
+}
+
+.login-content input {
+  width: 100%;
+  outline: none;
+  transition: 0.5s ease;
+}
+
+
+
+.login-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+}
