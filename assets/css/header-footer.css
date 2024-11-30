@@ -338,6 +338,19 @@ main {
 }
 
 @media screen and (max-width: 1044px) {
+  .header-content {
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    i {
+      font-size: 16px;
+    }
+  }
   .add-cart-btn {
     padding: 13px 23px;
     font-size: 12px;
@@ -405,4 +418,37 @@ main {
   .email-input {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 622px) {
+  .add-cart-btn {
+    padding: 13px 23px;
+    font-size: 12px;
+  }
+
+  .sticky-header {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .foot-title-and-links, .newsletter {
+    p { font-size: 12px; }
+    a { font-size: 12px; }
+    h2 { font-size: 20px;}
+  }
+
+  .projects { 
+    h2 { font-size: 20px;}
+    p { font-size: 10px; }
+  }
+
+  .footer-links-content a { font-size: 12px; }
+
+  .media-icons {
+    height: 36px;
+    width: 36px;
+    font-size: 14px;
+  }
+  
 }
