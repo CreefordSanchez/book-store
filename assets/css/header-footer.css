@@ -330,6 +330,7 @@ footer {
 }
 
 .print-error {
+  height: 25px;
   color: #ff0000;
 }
 
