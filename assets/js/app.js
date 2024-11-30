@@ -1,5 +1,7 @@
 "use strict";
 
+import { listen, select } from './data/utility.js';
+
 let currentIndex = 1; 
 const slides = document.querySelector(".slides");
 const totalSlides = document.querySelectorAll(".slide").length;
