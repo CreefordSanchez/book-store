@@ -1,13 +1,17 @@
 "use strict";
 
-import { listen, select } from './data/utility.js';
+import { listen, select, selectAll } from './data/utility.js';
 
+//login form
+const form = selectAll('form');
 const removeLoginBtn = select('.remove-login-btn');
 const login = select('.login');
 const userBtn = select('.login-btn');
 const submitBtn = select('.submit-login');
 const name = select('.name');
 const pass = select('.password');
+
+//contact form
 const email = select('.email');
 const subscribeBtn = select('.subscribe-btn');
 
@@ -27,6 +31,20 @@ listen(submitBtn, 'click', () => {
   }
 });
 
+listen(subscribeBtn, 'click', () => {
+  let emailValue = email.value;
+
+});
+
+form.forEach(form => {
+  listen(form, 'submit', (event) => {
+    event.preventDefault();
+  });
+})
+
+function validateEmail(email) {
+  if (email == '') return false;
+}
 function validateLogin() {
   let passValue = pass.value;
   let nameValue = name.value;
