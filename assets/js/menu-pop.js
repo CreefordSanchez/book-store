@@ -7,9 +7,9 @@ const showMenuBtn = select('.fa-bars');
 const menuTab = select('.menu-tab');
 
 listen(removeMenuBtn, 'click', () => {
-  menuTab.style.display = 'none';
+  menuTab.classList.remove('menu-tab-show');
 });
 
 listen(showMenuBtn, 'click', () => {
-  menuTab.style.display = 'inline';
+  menuTab.classList.add('menu-tab-show');
 });
