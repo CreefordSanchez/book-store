@@ -280,19 +280,9 @@ footer {
 }
 
 .footer-links-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-
-  ul {
-    display: flex;
-    gap: 20px;
-    justify-self: center;
-  }
-
-  a {
-    color: var(--app-gray);
-  }
 }
 
 .media-links {
