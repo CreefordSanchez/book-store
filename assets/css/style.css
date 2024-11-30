@@ -48,11 +48,12 @@
   color:#fff;
   font-size: 16px;
   border: 1px solid #f75045;
-  cursor: pointer;
+  line-height: 50px;
+  text-decoration: none;
 }
 
 .pick-one-now:hover {
-  background-color:  #ff695e;
+  background-color:  #e9867f;
   transition: ease-in-out 0.25s;
 }
 
@@ -65,7 +66,6 @@
   height: 1000px;
   background-color: #fff;
   position:relative;
-  z-index: -1;
   display:flex;
 
   h2 {
@@ -84,15 +84,13 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 1;
-  display:grid;
-  align-items: center;
 }
 
 .content-box {
   position:absolute;
   display:flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 10;
 }
 
 .text {
@@ -103,14 +101,9 @@
   display: grid;
   font-size: 25px;
   color: #fff;
-
-  .text-message {
-    width:100%;
-    height: 100%;
-  }
 }
 
-.new-product-btn {
+.show-all {
   margin-top: 20px;
   width: 200px;
   height: 60px;
@@ -119,10 +112,11 @@
   color: #fff;
   border-radius: 10px;
   font-size: 20px;
+  cursor: pointer;
 }
 
-.new-product-btn:hover {
-  background-color:  #ff695e;
+.show-all:hover {
+  background-color:#e9867f;
   transition: ease-in-out 0.25s;
 }
 
@@ -147,6 +141,12 @@
   padding:20px;
   width: 35%;
   height: auto;
+  cursor: pointer;
+}
+
+.book-img:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.25s;
 }
 
 .book-intro {
