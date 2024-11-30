@@ -89,18 +89,10 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-
 }
 
 .header-grid nav {
   justify-self: center;
-}
-
-.wallet {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 nav ul{
@@ -119,6 +111,73 @@ nav a:hover {
   color: #1877F2;
 }
 
+.wallet {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fa-bars:before {
+  display: none;
+  margin-left: 8px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.menu-tab {
+  display: none;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--app-gray);
+  padding-top: 20px;
+}
+
+.menu-tab-show {
+  display: inline;
+}
+.menu-title {
+  border-bottom: 1px solid var(--app-dark-gray);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-title h1 {
+  font-size: 40px;
+}
+
+.close-menu-tab {
+  background-color: var(--app-gray);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-links {
+  margin-top: 40px;
+
+  a, li {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.menu-links a {
+  font-size: 50px;
+  transition: 0.5s ease;
+  color: var(--app-blue);
+}
+
+.menu-links a:hover {
+  color: var(--app-orange);
+}
+
 /* Footer */
 footer {
   background-color: #1c272c;
@@ -135,8 +194,7 @@ footer {
 
 .footer-content {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
   padding: 30px 0;
 
   h2 {
@@ -178,7 +236,7 @@ footer {
   width: 50%;
 }
 
-.newsletter-projects {
+.new-project-container {
   display: flex;
   gap: 15px;
 }
@@ -220,6 +278,11 @@ footer {
   cursor: pointer;
 }
 
+.new-project-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .project-info {
   display: flex;
   align-items: center;
@@ -234,16 +297,14 @@ footer {
 }
 
 .project-img-circle {
-  height: 80px;
-  width: 80px;
   border-radius: 40px;
   padding: 5px;
   background-color: var(--app-orange);
 }
 
 .project-img {
-  width: 100%;
-  height: 100%;
+  min-width: 75px;
+  min-height: 75px;
   background-image: url(../media/img/reading-books.jpg);
   background-size: cover;
   border-radius: 40px;
@@ -265,25 +326,15 @@ footer {
   padding: 20px 0;
 }
 
-.footer-links h3 {
+.footer-links p {
   color: var(--app-gray);
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .footer-links-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-
-  ul {
-    display: flex;
-    gap: 20px;
-    justify-self: center;
-  }
-
-  a {
-    color: var(--app-gray);
-  }
 }
 
 .media-links {
@@ -319,6 +370,140 @@ footer {
 }
 
 /* Media Querys */
-@media screen and (max-width: 900px) {
+
+@media screen and (min-width: 999px) {
+  .menu-tab {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav {
+    display: none;
+  }
+
+  .fa-bars::before {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1044px) {
+  .header-content {
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    i {
+      font-size: 16px;
+    }
+  }
+  .add-cart-btn {
+    padding: 13px 23px;
+    font-size: 12px;
+  }
+  .sticky-header {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .foot-title-and-links, .newsletter {
+    p { font-size: 14px; }
+    a { font-size: 14px; }
+    h2 { font-size: 22px;}
+  }
+
+  .projects { 
+    h2 { font-size: 22px;}
+    p { font-size: 12px; }
+  }
+
+  .footer-links-content a { font-size: 14px; }
+
+  .media-icons {
+    height: 39px;
+    width: 39px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .footer-content.container {
+    width: min(100% - 10px, 500px);
+  }
+  .footer-content {
+    display: grid;
+  }
+
+  .foot-title-and-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .links {
+    width: 205px;
+  }
+
+  .news-and-form {
+    width: 100%;
+  }
+
+  .new-project-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .projects {
+    width: 205px;
+    justify-self: end;
+  }
+
+  .email-input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 622px) {
+  .add-cart-btn {
+    padding: 13px 23px;
+    font-size: 12px;
+  }
+
+  .sticky-header {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .foot-title-and-links, .newsletter {
+    p { font-size: 12px; }
+    a { font-size: 12px; }
+    h2 { font-size: 20px;}
+  }
+
+  .projects { 
+    h2 { font-size: 20px;}
+    p { font-size: 10px; }
+  }
+
+  .footer-links-content a { font-size: 12px; }
+
+  .media-icons {
+    height: 36px;
+    width: 36px;
+    font-size: 14px;
+  }
   
 }
