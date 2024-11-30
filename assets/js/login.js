@@ -14,6 +14,7 @@ const pass = select('.password');
 //contact form
 const email = select('.email');
 const subscribeBtn = select('.subscribe-btn');
+const error = select('.print-error');
 
 listen(removeLoginBtn, 'click', () => {
   login.style.display = 'none';
@@ -44,8 +45,10 @@ form.forEach(form => {
 
 function validateEmail(email) {
   if (email == '') {
+    error.innerText = 'Enter an email';
     return false;
   }
+
 }
 function validateLogin() {
   let passValue = pass.value;
