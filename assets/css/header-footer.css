@@ -201,11 +201,6 @@ footer {
     margin-bottom: 20px;
     color: var(--app-white);
   }
-
-  p, a {
-    color: var(--app-gray);
-    text-decoration: none;
-  }
 }
 
 /* Website Description and links */
@@ -213,6 +208,11 @@ footer {
   display: flex;
   gap: 15px;
   width: 50%;
+
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
 }
 
 .foot-title p:nth-child(2) {
@@ -243,10 +243,19 @@ footer {
 
 .newsletter {
   width: 50%;
+
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
 }
 
 .projects {
   width: 50%;
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
 }
 
 .input-and-btn {
