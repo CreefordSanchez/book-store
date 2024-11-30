@@ -36,6 +36,7 @@ listen(subscribeBtn, 'click', () => {
   let emailValue = email.value;
   if (validateEmail(emailValue)) {
     email.value = '';
+    error.innerText = '';
   }
 });
 
