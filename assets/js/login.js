@@ -43,7 +43,7 @@ form.forEach(form => {
 })
 
 function validateEmail(email) {
-  if (email == '') return false;
+  if (email == '') {}
 }
 function validateLogin() {
   let passValue = pass.value;
