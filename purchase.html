@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/cd92dcd941.js" crossorigin="anonymous"></script>
     <script src="./assets/js/app.js" type="module"></script>
     <script src="./assets/js/menu-pop.js" type="module"></script>
+    <script src="./assets/js/login.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -24,7 +25,7 @@
             </button>
           </a>
           <div class="sticky-nav">
-            <p><i class="fa-regular fa-user"></i> Login</p>
+            <p class="login-btn"><i class="fa-regular fa-user"></i> Login</p>
             <p><i class="fa-solid fa-gear"></i> Register</p>
             <p><i class="fa-regular fa-heart"></i> WishList</p>
           </div>
@@ -69,6 +70,21 @@
             <li><a href="./purchase.html">Shop</a></li>
           </ul>
         </div> 
+      </div>
+    </div>
+    <div class="login">
+      <div class="login-content">
+        <i class="fa-solid fa-x remove-login-btn"></i>          
+        <h3>Odyssey Books</h3>
+        <form>
+          <p>Name</p>
+          <input type="text" class="name">
+          <p>Password</p>
+          <input type="text" class="password">
+        </form>
+        <div class="login-btn">
+          <button class="submit-login">Enter</button>
+        </div>
       </div>
     </div>
     <main>

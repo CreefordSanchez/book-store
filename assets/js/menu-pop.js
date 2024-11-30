@@ -2,7 +2,7 @@
 
 import { listen, select } from './data/utility.js';
 
-const removeMenuBtn = select('.fa-x');
+const removeMenuBtn = select('.remove-menu-btn');
 const showMenuBtn = select('.fa-bars');
 const menuTab = select('.menu-tab');
 
