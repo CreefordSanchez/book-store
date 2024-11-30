@@ -201,11 +201,6 @@ footer {
     margin-bottom: 20px;
     color: var(--app-white);
   }
-
-  p, a {
-    color: var(--app-gray);
-    text-decoration: none;
-  }
 }
 
 /* Website Description and links */
@@ -213,6 +208,11 @@ footer {
   display: flex;
   gap: 15px;
   width: 50%;
+
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
 }
 
 .foot-title p:nth-child(2) {
@@ -243,10 +243,19 @@ footer {
 
 .newsletter {
   width: 50%;
+
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
 }
 
 .projects {
   width: 50%;
+  p, a {
+    color: var(--app-gray);
+    text-decoration: none;
+  }
 }
 
 .input-and-btn {
@@ -318,6 +327,11 @@ footer {
 
 .project-info:nth-of-type(2) .project-img {
   background-image: url(../media/img/three-peep-reading.jpg);
+}
+
+.print-error {
+  height: 25px;
+  color: #ff0000;
 }
 
 /* footer links and copyright */
