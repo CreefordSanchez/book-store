@@ -48,11 +48,12 @@
   color:#fff;
   font-size: 16px;
   border: 1px solid #f75045;
-  cursor: pointer;
+  line-height: 50px;
+  text-decoration: none;
 }
 
 .pick-one-now:hover {
-  background-color:  #ff695e;
+  background-color:  #e9867f;
   transition: ease-in-out 0.25s;
 }
 
@@ -65,55 +66,67 @@
   height: 1000px;
   background-color: #fff;
   position:relative;
-  z-index: -1;
+  display:flex;
 
   h2 {
     position:absolute;
-    inset: 150px auto auto 100px;
+    inset: 100px auto auto 100px;
     font-size: 50px;
   }
 }
 
 .new-product-intro {
   position:absolute;
-  inset: auto auto 100px 0;
+  margin-top:300px;
   width: 80%;
   height: 600px;
   background-color: #456480;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 1;
-  display:grid;
-  align-items: center;
-
-  .text {
-    padding-left: 100px;
-    width:600px;
-    height:200px;
-    display: grid;
-    font-size: 25px;
-    color: #fff;
-  }
 }
 
-.new-product-btn {
+.content-box {
+  position:absolute;
+  display:flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.text {
+  margin-top: 500px;
+  margin-left:100px;
+  width:40%;
+  height:200px;
+  display: grid;
+  font-size: 25px;
+  color: #fff;
+}
+
+.show-all {
   margin-top: 20px;
   width: 200px;
   height: 60px;
-  background-color: var(--app-lighter-gray);
-  color: #f75045;
+  background-color: #f75045;
+  border: 1px solid #f75045;
+  color: #fff;
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show-all:hover {
+  background-color:#e9867f;
+  transition: ease-in-out 0.25s;
 }
 
 .new-book-display {
+  margin-top: 150px;
+  margin-right:100px;
   display: grid;
   justify-items: end;
-  position: absolute;
-  inset: 200px 100px auto auto;
-  width: 700px;
+  width: 40%;
   height: 700px;
-  z-index: 2;
 }
 
 .new-book {
@@ -126,15 +139,21 @@
 
 .book-img {
   padding:20px;
-  width: 30%;
+  width: 35%;
   height: auto;
+  cursor: pointer;
+}
+
+.book-img:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.25s;
 }
 
 .book-intro {
   padding:20px;
   display:grid;
-  width: 70%;
-  height: auto;
+  width: 65%;
+  height: 100%;
   align-items: center;
 
   .new {
@@ -161,6 +180,32 @@
   width: min(100% - 30px, 1200px);
   margin-inline: auto;
 }
+
+/*--------------------------------------------*/
+/*Media screen                                */
+/*--------------------------------------------*/
+
+@media screen and (max-width:1200px) {
+  .content-box {
+      display: grid;
+  }
+
+  .text {
+    font-size: 20px;
+    margin-top: 350px;
+    width:60%;
+  }
+  
+  .new-product-intro, .new-book-display {
+    width:100%
+  }
+
+  .new-product-box {
+    height: 1500px;
+  }
+}
+
+/* Hero banner container */
 /*--------------------------------------------*/
 /*Hero banner container                        */
 /*--------------------------------------------*/

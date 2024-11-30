@@ -1,6 +1,6 @@
 "use strict";
 
-import { listen, select } from '../js/data/utility.js'; 
+import { listen, select } from './data/utility.js';
 
 let currentIndex = 1; 
 const slides = select(".slides");
@@ -77,3 +77,4 @@ dots.forEach((dot, index) => {
 
 listen(select(".prev"), "click", () => moveSlide(-1));
 listen(select(".next"), "click", () => moveSlide(1));
+
