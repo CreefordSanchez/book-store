@@ -439,6 +439,18 @@ html {
   text-decoration: underline;
 }
 
+@media (max-width: 1280px) {
+  .slide h2 {
+    font-size: 2rem;
+  }
+} 
+
+@media (max-width: 920px) {
+  .slide h2 {
+    font-size: 1.5rem;
+  }
+} 
+
 @media (max-width: 768px) {
   .slide {
     flex-direction: column; 
@@ -449,12 +461,12 @@ html {
   .slide-left {
     margin: 0; 
     padding: 20px; 
-    width: 90%; 
+    width: 100%; 
   }
 
   .slide-right {
     margin: 20px 0; 
-    width: 90%; 
+    width: 100%; 
   }
 
   .slide-right img {
@@ -462,7 +474,10 @@ html {
     max-width: 100%; 
   }
 
-  .btn {
-    width: 70%; 
+  .slide h2 {
+    font-size: 1.5rem;
   }
 }
+
+
+
