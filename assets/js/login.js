@@ -45,14 +45,14 @@ form.forEach(form => {
   });
 })
 
-function validateEmail(email) {
-  const emailTest = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]+(\.com|\.co)$/;
-  if (email == '') {
+function validateEmail(userEmail) {
+  const emailTest = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.(co|com)$/;
+  if (userEmail == '') {
     error.innerText = 'Enter an email';
     return false;
   }
 
-  if (!emailTest.test(email)) {
+  if (!emailTest.test(userEmail)) {
     error.innerText = 'Example@gmail.com';
     return false;
   }
