@@ -8,6 +8,8 @@ const userBtn = select('.login-btn');
 const submitBtn = select('.submit-login');
 const name = select('.name');
 const pass = select('.password');
+const email = select('.email');
+const subscribeBtn = select('.subscribe-btn');
 
 listen(removeLoginBtn, 'click', () => {
   login.style.display = 'none';
@@ -18,14 +20,14 @@ listen(userBtn, 'click', () => {
 });
 
 listen(submitBtn, 'click', () => {
-  if (validate()) {
+  if (validateLogin()) {
     login.style.display = 'none';
     name.value = '';
     pass.value = '';
   }
 });
 
-function validate() {
+function validateLogin() {
   let passValue = pass.value;
   let nameValue = name.value;
 
