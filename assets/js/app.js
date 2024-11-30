@@ -11,7 +11,6 @@ let lastClickTime = 0;
 
 
 function showSlide(index) {
-  console.log("Showing slide:", index);
   const slideWidth = 100; 
   slides.style.transition = "transform 0.5s ease-in-out";
   // Move the slides to the left by a percentage based on the current slide index
