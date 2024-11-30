@@ -126,6 +126,7 @@ nav a:hover {
 }
 
 .menu-tab {
+  display: none;
   position: fixed;
   z-index: 12;
   top: 0;
@@ -371,6 +372,11 @@ main {
   display: none;
 }
 
+@media screen and (min-width: 999px) {
+  .menu-tab {
+    display: none;
+  }
+}
 @media screen and (max-width: 1000px) {
   .header-grid {
     display: flex;
