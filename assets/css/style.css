@@ -234,6 +234,7 @@
   min-width: 100%;
   height: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .slide-left {
@@ -440,9 +441,22 @@ html {
   text-decoration: underline;
 }
 
+@media (max-width: 1280px) {
+  .slide h2 {
+    font-size: 2rem;
+  }
+} 
+
+@media (max-width: 920px) {
+  .slide h2 {
+    font-size: 1.5rem;
+  }
+} 
+
 @media (max-width: 768px) {
   .slide {
     flex-direction: column; 
+    justify-content: center;
     align-items: center; 
     text-align: center; 
   }
@@ -450,20 +464,33 @@ html {
   .slide-left {
     margin: 0; 
     padding: 20px; 
-    width: 90%; 
+    width: 100%; 
+    text-align: center;
   }
 
   .slide-right {
     margin: 20px 0; 
-    width: 90%; 
+    width: 100%; 
   }
 
   .slide-right img {
     height: auto; 
     max-width: 100%; 
+    margin: 0 auto;
+  }
+
+  .slide h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide p {
+    margin: 20px auto;
   }
 
   .btn {
-    width: 70%; 
+    margin: 0 auto;
   }
 }
+
+
+
